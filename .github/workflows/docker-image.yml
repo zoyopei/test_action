@@ -35,7 +35,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USER }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - run: echo ${{ steps.branch-names.outputs.current_branch || setps.branch-names.outputs.tag }}
+    - run: echo ${{ steps.branch-names.outputs.current_branch || steps.branch-names.outputs.tag }}
 
     #- name: Build and push
     #  uses: docker/build-push-action@v6
